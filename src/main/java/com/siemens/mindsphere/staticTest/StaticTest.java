@@ -1,3 +1,5 @@
+package com.siemens.mindsphere.staticTest;
+
 import java.time.LocalDate;
 
 /**
