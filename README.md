@@ -1,2 +1,3 @@
 # javaCore
-A study record for java core
+A study record for java core  
+##about a book
