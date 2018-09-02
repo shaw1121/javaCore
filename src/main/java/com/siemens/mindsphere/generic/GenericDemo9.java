@@ -53,3 +53,36 @@ class ComparatorByName implements Comparator<Person>{
         return temp == 0 ? o1.getAge()-o2.getAge() : temp;
     }
 }
+
+/*
+ * 以下两个比较器，都是通过姓名排序，就是类型不同，一个是student，一个是worker
+ * 既然使用的都是Person的内容，为什么不定义一个Person的比较器。
+ */
+/*
+//定义一个比较器。
+class ComparatorByName implements Comparator<Student>{
+
+	@Override
+	public int compare(Student o1, Student o2) {
+		int temp = o1.getName().compareTo(o2.getName());
+
+		return temp==0? o1.getAge() - o2.getAge() : temp;
+	}
+
+}
+//定义一个工人的姓名比较器。
+class ComparatorByWorkerName implements Comparator<Worker>{
+
+	@Override
+	public int compare(Worker o1, Worker o2) {
+		int temp = o1.getName().compareTo(o2.getName());
+
+		return temp==0? o1.getAge() - o2.getAge() : temp;
+	}
+
+}
+*/
+/*
+ * class TreeSet<E>{
+ * 		TreeSet(Comparator<? super E>  c){}
+ */
