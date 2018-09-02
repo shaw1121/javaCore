@@ -4,6 +4,10 @@
     <bytecodeTargetLevel>
       <module name="gradleLearn_main" target="1.8" />
       <module name="gradleLearn_test" target="1.8" />
+      <module name="java-core_main" target="1.8" />
+      <module name="java-core_test" target="1.8" />
+      <module name="javacore_main" target="1.8" />
+      <module name="javacore_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
