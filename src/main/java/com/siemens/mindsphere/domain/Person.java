@@ -1,6 +1,6 @@
 package com.siemens.mindsphere.domain;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Zhang Xiao
