@@ -24,6 +24,5 @@ public class FileMethodDemo {
         for (File subdir : dirs) {
             System.out.println("dir: " + subdir.getName());
         }
-
     }
 }

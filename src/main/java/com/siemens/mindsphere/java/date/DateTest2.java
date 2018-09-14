@@ -2,6 +2,7 @@ package com.siemens.mindsphere.java.date;
 
 import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -52,26 +53,30 @@ public class DateTest2 {
          * 4，怎么获取日期对象呢？需要将字符串文本--解析-->日期对象。
          */
 
-        String str_date1 = "2013-04-25";
+        String str_date1 = "2013-04-25 00:00:00";
         String str_date2 = "2013年7月29日";
         //需要定义两个模式。一个解析str_date1,一个解析str_date2。
         int style_1 = DateFormat.MEDIUM;//默认风格。
         int style_2 = DateFormat.LONG;//默认风格。
 
-        int days = getDays(str_date1,str_date2,	style_1,style_2);
-        System.out.println("days="+days);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        Date day1 = simpleDateFormat.parse(str_date1);
+
+        //int days = getDays(str_date1,str_date2,	style_1,style_2);
+        System.out.println("days="+day1);
     }
 
     private static int getDays(String str_date1, String str_date2,
             int style_1, int style_2) throws ParseException {
 
         //1，根据给定风格创建格式器对象。
-        DateFormat format_1 = DateFormat.getDateInstance(style_1);
         DateFormat format_2 = DateFormat.getDateInstance(style_2);
+        DateFormat format_1 = DateFormat.getDateInstance(style_1);
 
         //2,对文本进行解析。
-        Date date_1 = format_1.parse(str_date1);
         Date date_2 = format_2.parse(str_date2);
+        Date date_1 = format_1.parse(str_date1);
+
 
         //3,获取日期对象毫秒值。
         long time_1 = date_1.getTime();
