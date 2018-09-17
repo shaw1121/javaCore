@@ -1,12 +1,9 @@
 package com.siemens.mindsphere.io.d.test;
 
-import com.siemens.mindsphere.domain.Student;
 import com.siemens.mindsphere.domain.StudentForIOTest4;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
@@ -16,6 +13,8 @@ import java.util.TreeSet;
  * @date 9/14/2018 22:32
  */
 public class Test4 {
+
+    private static final String LIN_SEPARATOR = System.getProperty("line.separator");
 
     public static void main(String[] args) throws IOException {
 
@@ -55,7 +54,7 @@ public class Test4 {
 
             //2,遍历集合中的对象数据。将数据写入到指定文件中。
             for (StudentForIOTest4 stu : set) {
-                String info = stu.getName() + "\t" + stu.getSum() + System.lineSeparator();
+                String info = stu.getName() + "\t" + stu.getSum() + LIN_SEPARATOR;
 
                 //3,将数据写入到文件中。
                 fos.write(info.getBytes());
